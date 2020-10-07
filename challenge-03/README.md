@@ -2,7 +2,7 @@
 
 ```js
 // Declarar uma variável qualquer, que receba um objeto vazio.
-?
+var objeto = {}
 
 /*
 Declarar uma variável `pessoa`, que receba suas informações pessoais.
@@ -148,10 +148,11 @@ palavra "ano" ao invés de "anos", pois é singular;
 deve conter no retorno da frase acima é "metro" no lugar de "metros".
 - Para cada validação, você irá declarar uma variável localmente (dentro do
 método), que será concatenada com a frase de retorno, mostrando a resposta
-correta, de acordo com os dados inseridos no objeto.
-*/
-?
-
-// Agora, apresente-se ;)
-?
-```
+correta, de aiiiiiiiiiwq
+iciiordwq
+wq
+:wq
+qw
+wq
+wq
+wqo
