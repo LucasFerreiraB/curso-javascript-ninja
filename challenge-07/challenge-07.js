@@ -71,7 +71,7 @@ for(var pares = 100; pares <= 120; pares++){
 }
 
 
-console.log('Números ímpares entre 111 e 125: ');
+console.log('Números ímpares entre 111 e 125: \n');
 for(var impar = 111;  impar <= 125; impar++){
     if(impar % 2 !== 0){
         console.log(impar);
