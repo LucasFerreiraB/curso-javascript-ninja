@@ -42,7 +42,7 @@ for(var prop in person){
 
 console.log('The person has ' + counter + ' properties');    
 /*
-Crie uma função chamada `moreThan`, que vai verificar se a pessoa (objeto
+Crie uma função chamada  `moreThan`, que vai verificar se a pessoa (objeto
 criado acima) é mais velha que a idade passada por parâmetro.
 Se verdadeiro, retornar `true`. Senão, retornar false.
 Após a função, mostrar a mensagem no console:
@@ -67,20 +67,20 @@ for(var i = 0; i < 20; i ++){
     }
     numbers.push(i);
 }
-
+ 
 console.log(numbers);
 
 
 /*
 Faça outro loop de 0 a 20, que adicione a um array chamado `numbers` (já
-criado acima, só precisa ser reiniciado) números de 0 a 20, inclusive
+criado acima, só precisa  ser reiniciado) números de 0 a 20, inclusive
 esses. Se o número for ímpar, pular para o próximo número.
 Mostrar no console os números do array.
 */
 console.log( 'Pares de 0 a 20:' );
 numbers = [];
 for(var i = 0; i <= 20; i ++){
-    if(i % 2 !== 0){
+    if(i % 2 === 0){
         continue;
     }
     numbers.push(i);
