@@ -26,17 +26,15 @@ function Person(name, lastName, age) {
     this.name = name,
     this.lastName = lastName,
     this.age = age;
-    
-    function getFullName() {
-      return this.name + this.lastName;
+    this.getFullName = function getFullname() {
+      return this.name + ' ' + this.lastName;
     }
-
-    function getAge() {
-      return age;
+    this.getAge = function getAge() {
+      return this.age;
     }
-
-    function addAge() {
-      return arguments.push(age);
+    this.addAge = function addAge() {
+      this.age += arguments[0];
+      return this;
     }
 };
 
@@ -59,24 +57,26 @@ console.log(lk);
 Mostre no console o nome completo de cada pessoa.
 */
 console.log( '\nNomes das pessoas:' );
-console.log(luck.name + ' ' + luck.lastName);
-console.log(fael.name + ' ' + fael.lastName);
-console.log(lk.name + ' ' + lk.lastName);
+console.log(luck.getFullName());
+console.log(fael.getFullName());
+console.log(lk.getFullName());
 
 /*
 Mostre no console as idades de cada pessoa, com a frase:
 - "[NOME COMPLETO] tem [IDADE] anos."
 */
 console.log( '\nIdade das pessoas:' );
-console.log(luck.name + ' ' + luck.lastName + ' tem ' + luck.age + ' anos. ');
-console.log(fael.name + ' ' + fael.lastName + ' tem ' + fael.age + ' anos. ');
-console.log(lk.name + ' ' + lk.lastName + ' tem ' + lk.age + ' anos. ');
+console.log(luck.getFullName() + ' ' + 'tem ' + luck.age + ' anos. ');
+console.log(fael.getFullName() + ' ' + 'tem ' + fael.age + ' anos. ');
+console.log(lk.getFullName() + ' ' + 'tem ' + lk.age + ' anos. ');
 /*
 Adicione alguns anos à cada pessoa, e mostre no console a nova idade de
 cada um. A frase deverá ser no formato:
 - "[NOME COMPLETO] agora tem [NOVA IDADE] anos."
 */
 console.log( '\nNova idade das pessoas:' );
-luck.addAge = 124
-console.log(luck.age);
+
+console.log(luck.getFullName() + ' agora tem ' + luck.addAge(13).getAge() + ' anos. ');
+console.log(fael.getFullName() + ' agora tem ' + fael.addAge(12).getAge() + ' anos. ');
+console.log(lk.getFullName() + ' agora tem ' + fael.addAge(12).getAge() + ' anos. ');
 })();
