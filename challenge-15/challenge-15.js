@@ -23,20 +23,20 @@ as seguintes características:
   que será instanciado.
 */
 function Person(name, lastName, age) {
-    name: name;
-    lastName: lastName;
-    age: age;
+    this.name = name,
+    this.lastName = lastName,
+    this.age = age;
     
     function getFullName() {
-      return [name], [lastName]
-    };
+      return this.name + this.lastName;
+    }
 
     function getAge() {
-      return age
-    };
+      return age;
+    }
 
     function addAge() {
-      arguments
+      return arguments.push(age);
     }
 };
 
@@ -47,26 +47,36 @@ parâmetros corretamente para o construtor para criar as novas pessoas.
 Mostre as 3 novas pessoas criadas no console (Um console.log por pessoa).
 */
 console.log( 'Novas pessoas criadas à partir de Person:' );
-// ?
 
+var luck = new Person('lucas', 'ferreira', 24);
+var fael = new Person('fagunde', 'soares', 24);
+var lk = new Person('lk', 'fer', 25);
+
+console.log(luck);
+console.log(fael);
+console.log(lk);
 /*
 Mostre no console o nome completo de cada pessoa.
 */
 console.log( '\nNomes das pessoas:' );
-// ?
+console.log(luck.name + ' ' + luck.lastName);
+console.log(fael.name + ' ' + fael.lastName);
+console.log(lk.name + ' ' + lk.lastName);
 
 /*
 Mostre no console as idades de cada pessoa, com a frase:
 - "[NOME COMPLETO] tem [IDADE] anos."
 */
 console.log( '\nIdade das pessoas:' );
-// ?
-
+console.log(luck.name + ' ' + luck.lastName + ' tem ' + luck.age + ' anos. ');
+console.log(fael.name + ' ' + fael.lastName + ' tem ' + fael.age + ' anos. ');
+console.log(lk.name + ' ' + lk.lastName + ' tem ' + lk.age + ' anos. ');
 /*
 Adicione alguns anos à cada pessoa, e mostre no console a nova idade de
 cada um. A frase deverá ser no formato:
 - "[NOME COMPLETO] agora tem [NOVA IDADE] anos."
 */
 console.log( '\nNova idade das pessoas:' );
-// ?
+luck.addAge = 124
+console.log(luck.age);
 })();
