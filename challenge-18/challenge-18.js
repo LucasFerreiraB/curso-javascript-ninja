@@ -3,16 +3,21 @@
     // \s - espaço em branco, quebra de linha e tabulação (TAB).
     // \n - quebra de linha.
     // \. - todos, menos quebra de linha.
-    // ^ - negação. 
+    // ^ - negação/captura o começo da string.
+    // $ - no final captura o final da string. 
     // \W - qualquer caractere, menos os alfanuméricos.
+    // m - Multiline, captura finais de linha 
     // \D - qualquer caractere, menos os números.
     // \S - qualquer caractere, menos espaços em branco.
     // {n(minimo), m(maximo)} - intervalo.
     // {n, ..} - minimo até n vezes.
     // {n} - quantidade exata.   
     // ? - repete zero ou uma ocorrencia do item anterior.
+    // (?:) - somente agrupamento, sem capturar.
     // + - repete uma ou mais ocorrencias do item anterior.
     // * - repete zero ou mais ocorrencias do item anterior. 
+    // \1, \2 - referencia dentro da regex.
+    
     // - Exemplo validação URL: https?:\/\/\w+[.\w]+
     // - Exemplo validação email: [\w+]+@\w+\.\w+.?([\w]{2})?
     // - Exemplo: var queryString = '?s=lala&b=bebe&c=cce';
