@@ -23,17 +23,18 @@ var $Stop = doc.querySelector('[data-js="stop"]');
 var $Reset = doc.querySelector('[data-js="reset"]');
 
 $Start.addEventListener('click', startTimer, false);
+$Stop.addEventListener('click', stopTimer, false);
+$Reset.addEventListener('click', resetTimer, false);
+
 function startTimer(){
     $timer.value =  +$timer.value1 + 1;
     interval = setTimeout(startTimer, 1000);
 } 
 
-$Stop.addEventListener('click', stopTimer, false);
 function stopTimer(){
     clearTimeout(interval);
 }
 
-$Reset.addEventListener('click', resetTimer, false);
 function resetTimer(){
     $timer.value = 0;
     stopTimer();
