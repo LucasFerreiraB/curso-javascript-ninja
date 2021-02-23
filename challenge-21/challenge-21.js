@@ -18,16 +18,16 @@ dado ao elemento HTML deve definir o que o elemento é ou o que ele faz.
     'use strict';
 var interval;
 var $timer = doc.querySelector('[data-js="timer"]');
-var $Start = doc.querySelector('[data-js="start"]');  
-var $Stop = doc.querySelector('[data-js="stop"]');
-var $Reset = doc.querySelector('[data-js="reset"]');
+var $start = doc.querySelector('[data-js="start"]');  
+var $stop = doc.querySelector('[data-js="stop"]');
+var $reset = doc.querySelector('[data-js="reset"]');
 
-$Start.addEventListener('click', startTimer, false);
-$Stop.addEventListener('click', stopTimer, false);
-$Reset.addEventListener('click', resetTimer, false);
+$start.addEventListener('click', startTimer, false);
+$stop.addEventListener('click', stopTimer, false);
+$reset.addEventListener('click', resetTimer, false);
 
 function startTimer(){
-    $timer.value =  +$timer.value1 + 1;
+    $timer.value = +$timer.value + 1; 
     interval = setTimeout(startTimer, 1000);
 } 
 
